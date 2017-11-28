@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= htmlWebpackPlugin.options.title%></title>
+  </head>
+  <body>
+    <div id='root'>
+    </div>
+
+    <% for (var key in htmlWebpackPlugin.files) { %>
+      <%= key %> : <%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
+    <% } %>
+    <br>
+    <% for (var key in htmlWebpackPlugin.options) { %>
+      <%= key %> : <%= JSON.stringify(htmlWebpackPlugin.options[key]) %>
+    <% } %>
+
+  </body>
+</html>
